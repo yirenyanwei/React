@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './css/01-index.css'
 
 export default class App extends Component {
     myRef = React.createRef()
@@ -27,7 +28,12 @@ export default class App extends Component {
             {
                 this.state.list.map((item, index)=>
                 <li key={item.id}>
-                    {item.text}
+                    {/* {item.text} */}
+                    {/* 富文本展示 */}
+                    <span dangerouslySetInnerHTML={
+                      {__html: item.text}
+                    }></span>
+
                     {/* button传参 */}
                     {/* <button onClick={this.handleDelClick.bind(this, index)}>del</button> */}
                     <button onClick={()=>this.handleDelClick(index)}>del</button>
@@ -35,6 +41,10 @@ export default class App extends Component {
                 )
             }
         </ul>
+        {/* 三种条件显示的方法 */}
+        {this.state.list.length==0?<div>暂无代办事项</div>:null}
+        {this.state.list.length==0&&<div>暂无代办事项</div>}
+        <div className={this.state.list.length==0?'':'hidden'}>暂无代办事项</div>
       </div>
     )
   }

@@ -4,7 +4,7 @@
 import React from 'react';
 //把React组件渲染到页面中
 import ReactDOM from 'react-dom/client';
-import App from './01-base/10-todolist';//必须大写
+import App from './01-base/18-属性vs状态';//必须大写
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 //严格模式
