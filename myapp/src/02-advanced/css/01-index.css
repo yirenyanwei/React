@@ -1,0 +1,9 @@
+.active {
+    color: orange;
+}
+#myapp {
+    background-color: green;
+}
+.hidden {
+    display: none;
+}
