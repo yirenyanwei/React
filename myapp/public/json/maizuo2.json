@@ -1,0 +1,310 @@
+{
+    "status": 0,
+    "data": {
+        "films": [
+            {
+                "filmId": 5988,
+                "name": "你是我的春天",
+                "poster": "https://pic.maizuo.com/usr/movie/e2ad7502c83c5119c3d8adeeac214e17.jpg",
+                "actors": [
+                    {
+                        "name": "周楠",
+                        "role": "导演",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/6ae4f020975d7b0a2a7c5eb308a3b42a.jpg@1246w_1246h_1l_0e"
+                    },
+                    {
+                        "name": "张弛",
+                        "role": "导演",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/a6d2d077f5cd0bcae99ea9dad6dd7e7e.jpg@1246w_1246h_1l_0e"
+                    },
+                    {
+                        "name": "田羽生",
+                        "role": "导演",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/f55601720a78ddee0c8d0e723b9d4750.jpg@1246w_1246h_1l_0e"
+                    },
+                    {
+                        "name": "董越",
+                        "role": "导演",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/df0d31274ab36ec516b51841c205d33b.jpg@1246w_1246h_1l_0e"
+                    },
+                    {
+                        "name": "饶晓志",
+                        "role": "导演",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/5ecbfbdd31a84cfc95968e567c5681be.jpg@1246w_1246h_1l_0e"
+                    }
+                ],
+                "director": "周楠|张弛|田羽生|董越|饶晓志",
+                "category": "剧情",
+                "synopsis": "双影帝影后集结，献给每一个努力生活的“你”和“我”。影片由中国电影家协会指导拍摄，陈道明任总监制，黄渤任监制，实力派演员强力加盟演绎人间温情故事。倔强的人为了爱人奔走在空城，讨血汗钱的农民工巧合下驰援武汉，抗疫前线的人们除了顶着高压还要学会告别，后方阵地的社区工作者照顾居民却把风险留给了自己，平时疏于交流的父子也被迫日夜相处。总有一些措手不及的事情发生，但也总有一颗治愈的种子在人们心中生根发芽，这是一部关于春天和希望的电影。",
+                "filmType": {
+                    "name": "2D",
+                    "value": 1
+                },
+                "nation": "中国大陆",
+                "language": "",
+                "videoId": "",
+                "premiereAt": 1656633600,
+                "timeType": 3,
+                "runtime": 122,
+                "item": {
+                    "name": "2D",
+                    "type": 1
+                },
+                "isPresale": true,
+                "isSale": false
+            },
+            {
+                "filmId": 6000,
+                "name": "地火",
+                "poster": "https://pic.maizuo.com/usr/movie/4f742c0e95fd2f69abce71477aa29dbf.jpg",
+                "actors": [
+                    {
+                        "name": "徐耿",
+                        "role": "导演",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/250657429b332666b8729d1571a989b2.jpg@1246w_1246h_1l_0e"
+                    },
+                    {
+                        "name": "赵波",
+                        "role": "罗世文",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/98bb1d91d0519442ae8a793ac2131bae.jpg@1246w_1246h_1l_0e"
+                    },
+                    {
+                        "name": "岳红",
+                        "role": "罗母",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/d8f28c4ceee5a573785a4614aeb7675f.jpg@1246w_1246h_1l_0e"
+                    },
+                    {
+                        "name": "赵梦迪",
+                        "role": "王一苇",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/e7141752698e4bf1381a429496bfad67.jpg@1246w_1246h_1l_0e"
+                    },
+                    {
+                        "name": "张明健",
+                        "role": "车耀先",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/963d9514d5955a46444f0c4415dc61a5.jpg@1246w_1246h_1l_0e"
+                    }
+                ],
+                "director": "徐耿",
+                "category": "剧情|历史",
+                "synopsis": "该片讲述生于四川威远的罗世文自幼品学兼优，从海外学成归来立刻投入到革命的大潮中去，带领四川工农红军第一路军奋战到底。抗战爆发后，罗世文回到成都，以公开的共产党人身份投身革命事业，建立联络点，在斗争中抗日救国。1939年年末至1940年初，国民党反动派利用春荒策划暴民抢米事件，借机逮捕共产党人。罗世文被捕后在监狱中，罗世文和车耀先、韩子栋、许晓轩等组织了临时党支部，带领难友同敌人展开坚决的斗争。临死前的一刻，罗世文仍旧利用脚上的破旧皮鞋，传递出自己最后的一份信念，鼓舞着剩下的战友们不屈不挠。",
+                "filmType": {
+                    "name": "2D",
+                    "value": 1
+                },
+                "nation": "中国大陆",
+                "language": "",
+                "videoId": "",
+                "premiereAt": 1656633600,
+                "timeType": 3,
+                "runtime": 117,
+                "item": {
+                    "name": "2D",
+                    "type": 1
+                },
+                "isPresale": false,
+                "isSale": false
+            },
+            {
+                "filmId": 5976,
+                "name": "开心超人之英雄的心",
+                "poster": "https://pic.maizuo.com/usr/movie/36e714044b7e5d555a81a74f816bde99.jpg",
+                "actors": [
+                    {
+                        "name": "黄伟明",
+                        "role": "导演",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/e1a50ce5744ad23e2dd54235fec39fb5.jpg@1246w_1246h_1l_0e"
+                    },
+                    {
+                        "name": "祖晴",
+                        "role": "配音演员",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/e8b352f2af233311a7eadbcbcd855ec4.jpg@1246w_1246h_1l_0e"
+                    },
+                    {
+                        "name": "邓玉婷",
+                        "role": "配音演员",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/9ea7cb5cc3720a7e55092bffa638ed8d.jpg@1246w_1246h_1l_0e"
+                    },
+                    {
+                        "name": "刘红韵",
+                        "role": "配音演员",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/50ccbfd67225fa96d7927290c203c668.jpg@1246w_1246h_1l_0e"
+                    },
+                    {
+                        "name": "严彦子",
+                        "role": "配音演员",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/bc8893ed4edda501ed700216dd93760e.jpg@1246w_1246h_1l_0e"
+                    }
+                ],
+                "director": "黄伟明",
+                "category": "动画|科幻|喜剧",
+                "synopsis": "一年一度的星星球科技展隆重开幕。展会上，一颗蕴含超强能力的能量石引起了各方的注意。大大怪小小怪得知消息后，命令怪兽大肆破坏，抢走了能量石。危难之际，开心超人联盟集结出击与怪兽展开激斗。但是，超人们因为开心超人的冲动行事纷纷失去了超能力，他们将如何夺回超能力，守护星星球？",
+                "filmType": {
+                    "name": "2D",
+                    "value": 1
+                },
+                "nation": "中国大陆",
+                "language": "",
+                "videoId": "",
+                "premiereAt": 1657238400,
+                "timeType": 3,
+                "runtime": 96,
+                "item": {
+                    "name": "2D",
+                    "type": 1
+                },
+                "isPresale": false,
+                "isSale": false
+            },
+            {
+                "filmId": 5979,
+                "name": "海底小纵队：洞穴大冒险",
+                "poster": "https://pic.maizuo.com/usr/movie/e6ee44927d2e3370dcf251c2627ef6d4.jpg",
+                "actors": [
+                    {
+                        "name": "周沁",
+                        "role": "导演",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/4d1a108c548abf13808e6dcd76ae1600.jpg@1246w_1246h_1l_0e"
+                    },
+                    {
+                        "name": "郭盛",
+                        "role": "巴克队长",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/158d1693bdcc9f5b5084d2fbca23324c.jpg@1246w_1246h_1l_0e"
+                    },
+                    {
+                        "name": "苏俣",
+                        "role": "呱唧，章教授，小蓝莓",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/9c9269d70ae3b887e637e7b08af9bc81.jpg@1246w_1246h_1l_0e"
+                    },
+                    {
+                        "name": "方宇",
+                        "role": "皮医生",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/93308cb95c3af299379287f49b727480.jpg@1246w_1246h_1l_0e"
+                    },
+                    {
+                        "name": "曹凯",
+                        "role": "谢灵通，小鲈鱼",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/d41f742618795d8255a07962fd423ff1.jpg@1246w_1246h_1l_0e"
+                    }
+                ],
+                "director": "布莱尔·西蒙斯|周沁",
+                "category": "冒险|动画|喜剧",
+                "synopsis": "海底小纵队的任务是将小章鱼库巴送回到它远在加勒比海的家。但是一场意外的事故将他们困在了尤卡坦半岛的热带雨林中，众人必须通过一个海底的隧道到达加勒比海。一场海底洞穴的潜水大冒险就这样开始了……",
+                "filmType": {
+                    "name": "2D",
+                    "value": 1
+                },
+                "nation": "中国大陆",
+                "language": "",
+                "videoId": "",
+                "premiereAt": 1657324800,
+                "timeType": 3,
+                "runtime": 80,
+                "item": {
+                    "name": "2D",
+                    "type": 1
+                },
+                "isPresale": true,
+                "isSale": false
+            },
+            {
+                "filmId": 5991,
+                "name": "龙女孩",
+                "poster": "https://pic.maizuo.com/usr/movie/4e7081f1ad8736cc18a0621817b695f3.jpg",
+                "actors": [
+                    {
+                        "name": "刘静",
+                        "role": "导演",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/aec34ce8f9724d05f8826672555427dd.jpg"
+                    },
+                    {
+                        "name": "拉姆·戈帕尔·维马",
+                        "role": "导演",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/97caf6579a28d456bcb7f4dbf53b554f.jpg@1246w_1246h_1l_0e"
+                    },
+                    {
+                        "name": "POOJA BHALEKAR  普加·巴哈卢卡",
+                        "role": "普加  POOJA",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/a25e57d6df3ae353c2c453734a3e8869.jpg@1246w_1246h_1l_0e"
+                    },
+                    {
+                        "name": "Parth Suri",
+                        "role": "尼尔  NEIL",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/9466c906e8d0fb211ec71981d7f7a62b.jpg"
+                    },
+                    {
+                        "name": "石天龙",
+                        "role": "师父   Master",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/82674be30718cda6cf6a27818c063201.jpg"
+                    }
+                ],
+                "director": "刘静|拉姆·戈帕尔·维马",
+                "category": "动作|爱情|剧情",
+                "synopsis": "印度女孩Pooja15岁时，目睹了姐姐被性侵致死，让她觉得人生毫无希望。直到观看电影“龙争虎斗”，主演李小龙便成为她人生的导师。她向中国师父学习中国功夫，来中国感悟中国文化，走上自强之路。    一股恶势力威逼利诱师父，想吞并师父的武术学校—龙校。师父预感到杀机重重，将龙校托付给了Pooja。   晴天霹雳般的变故让Pooja陷入了巨大的悲痛和挫折，面对只手遮天的强大敌人，孤身一人的她将何去何从......",
+                "filmType": {
+                    "name": "2D",
+                    "value": 1
+                },
+                "nation": "中国大陆,印度",
+                "language": "",
+                "videoId": "",
+                "premiereAt": 1657843200,
+                "timeType": 3,
+                "runtime": 105,
+                "item": {
+                    "name": "2D",
+                    "type": 1
+                },
+                "isPresale": true,
+                "isSale": false
+            },
+            {
+                "filmId": 3451,
+                "name": "阿凡达2",
+                "poster": "https://pic.maizuo.com/usr/movie/c5da4eddf824824c21f42aebd4f4120f.jpg",
+                "actors": [
+                    {
+                        "name": "萨姆·沃辛顿",
+                        "role": "杰克·萨利",
+                        "avatarAddress": "https://pic.maizuo.com/usr/100003451/df050071a829cb47d7612e1e4c3f8b37.jpg"
+                    },
+                    {
+                        "name": "佐伊·索尔达娜",
+                        "role": "奈蒂莉",
+                        "avatarAddress": "https://pic.maizuo.com/usr/100003451/a457d0e419128720688a6d11712db4b4.jpg"
+                    },
+                    {
+                        "name": "西格妮·韦弗",
+                        "role": "格蕾丝·奥格斯",
+                        "avatarAddress": "https://pic.maizuo.com/usr/100003451/2ebc1d29d21743c960de288930921814.jpg"
+                    },
+                    {
+                        "name": "史蒂芬·朗",
+                        "role": "迈尔斯·夸奇上校",
+                        "avatarAddress": "https://pic.maizuo.com/usr/100003451/368a975d10ee8e0bf30b5d5906fb6527.jpg"
+                    }
+                ],
+                "director": "詹姆斯·卡梅隆",
+                "category": "动作|科幻|奇幻|冒险",
+                "synopsis": "《阿凡达2》的剧情承接自第一部的5年之后。曾经的地球残疾军人杰克·萨利，如今已经是潘多拉星球纳美族一方部族的族长，并且与爱妻娜塔莉共同育有一对可爱的儿女，日子过得平淡而充实。然而某天，有个部族的兄弟在海岸附近巡逻时遭到利器割喉身亡。通过现场勘查，以及作为前海军陆战队员的敏锐直觉，杰克判断已经有人类的阿凡达混入了部落……",
+                "filmType": {
+                    "name": "2D",
+                    "value": 1
+                },
+                "nation": "美国",
+                "language": "英语",
+                "videoId": "",
+                "premiereAt": 1671321600,
+                "timeType": 3,
+                "runtime": 90,
+                "item": {
+                    "name": "2D",
+                    "type": 1
+                },
+                "isPresale": false,
+                "isSale": false
+            }
+        ],
+        "total": 6
+    },
+    "msg": "ok"
+}
