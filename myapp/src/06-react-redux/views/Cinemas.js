@@ -1,42 +1,32 @@
 import React, { Component,useState,useEffect } from 'react'
 import store from '../redux/store'
 import getCinemaListAction from '../redux/actionCreator/getCinemaListAction'
+import {connect} from 'react-redux'
 
-export default function Cinemas(props) {
-  const [cityName, setCityName] = useState(store.getState().CityReducer.cityName)
-  const [cinemaList, setCinemaList] = useState(store.getState().CinemaListReducer.list)
+function Cinemas(props) {
+  let {list, getCinemaListAction} = props
   useEffect(() => {
-    let list = store.getState().CinemaListReducer.list
     if(list.length == 0) {
       //后台取数据
       //actionCreator 中取数据。
-      store.dispatch(getCinemaListAction())
+      getCinemaListAction()
     }else {
-      console.log(list)
+      console.log('缓存', list)
     }
-    //subscribe
-    var unsubscribe = store.subscribe(()=>{
-      console.log('cinema subscribe')
-      setCinemaList(store.getState().CinemaListReducer.list)
-    })
-    return () => {
-      //取消订阅
-      unsubscribe()
-    }
-  }, [])
+  }, [list, getCinemaListAction])
   
   return (
     <div>
       <div style={{overflow:'hidden'}}>
         <div onClick={()=>{
           props.history.push('/city')
-        }} style={{float:'left'}}>{cityName}</div>
+        }} style={{float:'left'}}>{props.cityName}</div>
         <div style={{float:'right'}} onClick={()=>{
           props.history.push('/cinemas/search')
         }}>搜索</div>
       </div>
       <ul>
-        {cinemaList.map(item =>
+        {props.list.map(item =>
             <dl key={item.cinemaId} style={{padding:'10px'}}>
                 <dt>
                     {item.name}
@@ -50,3 +40,13 @@ export default function Cinemas(props) {
     </div>
   )
 }
+const mapStateToProps = (state)=>{
+  return {
+    list: state.CinemaListReducer.list,
+    cityName: state.CityReducer.cityName,
+  }
+}
+const mapDispatchToProps = {
+  getCinemaListAction
+}
+export default connect(mapStateToProps,mapDispatchToProps)(Cinemas)

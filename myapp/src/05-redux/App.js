@@ -6,14 +6,13 @@ import store from './redux/store'
 
 export default class App extends Component {
   state = {
-    show:store.getState().show
+    show:store.getState().TabbarReducer.show
   }
   //store.subscribe
   componentDidMount() {
     store.subscribe(()=>{
-      console.log('app subscribe', store.getState())
       this.setState({
-        show:store.getState().show
+        show:store.getState().TabbarReducer.show
       })
     })
   }
