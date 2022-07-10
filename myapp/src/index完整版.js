@@ -4,7 +4,11 @@
 import React from 'react';
 //把React组件渲染到页面中
 import ReactDOM from 'react-dom/client';
-import App from './09-immutable/redux/App';//必须大写
+import App from './09-immutable/01-base';//必须大写
+import { Provider } from 'react-redux'
+import {store,persistor} from './08-antd-motile/redux/store';
+import { PersistGate } from 'redux-persist/integration/react'
+// import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 //严格模式
@@ -28,5 +32,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(app)
 
 //函数组件
-root.render(<App />)
+root.render(
+    <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+            <App />
+        </PersistGate>
+    </Provider>
+)
 

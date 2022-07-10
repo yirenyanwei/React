@@ -1,0 +1,8 @@
+.tabbarActive {
+    border: solid 1px red;
+    color: orange;
+}
+/* 表示全局的,不会改变名字 */
+:global(.active) {
+    background-color: red;
+}
