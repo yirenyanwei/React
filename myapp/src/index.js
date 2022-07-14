@@ -4,7 +4,8 @@
 import React from 'react';
 //把React组件渲染到页面中
 import ReactDOM from 'react-dom/client';
-import App from './09-immutable/redux/App';//必须大写
+import App from './10-mobx/router/App';//必须大写
+import store from './10-mobx/router/mobx/store6';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 //严格模式
@@ -28,5 +29,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(app)
 
 //函数组件
-root.render(<App />)
+root.render(
+    <App store={store}></App>
+)
 
