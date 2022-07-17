@@ -1,0 +1,57 @@
+{
+    "status": 0,
+    "data": [
+        {
+            "bannerId": 431,
+            "actionType": 22,
+            "actionData": "{\"businessId\":\"5983\"}",
+            "imgUrl": "https://static.maizuo.com/v5/upload/6039de152eb4b587b5f49bd3ea05a71d.jpg",
+            "masterTitle": "",
+            "slaveTitle": "",
+            "displayOrder": 0,
+            "bindBusinessId": "",
+            "cityIds": "0",
+            "name": "天才计划",
+            "displayTimes": 0,
+            "slaveImgUrl": "",
+            "startTime": "1655049600",
+            "endTime": "1657727999",
+            "businessId": ""
+        },
+        {
+            "bannerId": 432,
+            "actionType": 22,
+            "actionData": "{\"businessId\":\"5983\"}",
+            "imgUrl": "https://static.maizuo.com/v5/upload/6039de152eb4b587b5f49bd3ea05a71d.jpg",
+            "masterTitle": "",
+            "slaveTitle": "",
+            "displayOrder": 0,
+            "bindBusinessId": "",
+            "cityIds": "0",
+            "name": "天才计划",
+            "displayTimes": 0,
+            "slaveImgUrl": "",
+            "startTime": "1655049600",
+            "endTime": "1657727999",
+            "businessId": ""
+        },
+        {
+            "bannerId": 433,
+            "actionType": 22,
+            "actionData": "{\"businessId\":\"5983\"}",
+            "imgUrl": "https://static.maizuo.com/v5/upload/6039de152eb4b587b5f49bd3ea05a71d.jpg",
+            "masterTitle": "",
+            "slaveTitle": "",
+            "displayOrder": 0,
+            "bindBusinessId": "",
+            "cityIds": "0",
+            "name": "天才计划",
+            "displayTimes": 0,
+            "slaveImgUrl": "",
+            "startTime": "1655049600",
+            "endTime": "1657727999",
+            "businessId": ""
+        }
+    ],
+    "msg": "success"
+}

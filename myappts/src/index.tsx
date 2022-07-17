@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from './06-antdmobile/App';
 import reportWebVitals from './reportWebVitals';
-import './01-ts基础/04-函数'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
