@@ -4,7 +4,7 @@
 import React from 'react';
 //把React组件渲染到页面中
 import ReactDOM from 'react-dom/client';
-import App from './10-mobx/router/App';//必须大写
+import App from './13-redux-saga/App';//必须大写
 import store from './10-mobx/router/mobx/store6';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
