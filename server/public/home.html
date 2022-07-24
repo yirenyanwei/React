@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Home</h1>
+    <button onclick="getData()">查询</button>
+    <button onclick="createData()">创建</button>
+    <button onclick="updateData()">修改</button>
+    <button onclick="deleteData()">删除</button>
+</body>
+<script>
+    function getData() {
+        //后端调试器中的语句
+        let query = `
+        query {
+            getNowplayingList{
+                id,
+                name,
+                price
+            }
+        }
+        `
+        fetch("/graphQL", {
+            method:'POST',
+            headers:{
+                'Content-type':'application/json',
+                'Accept':'application/json'
+            },
+            body:JSON.stringify({
+                query:query
+            })
+        }).then(res=>res.json()).then(res=>{
+            console.log(res)
+        })
+    }
+    function createData(params) {
+        let query = `
+        mutation ($input:InputFilm){
+            createFilm(input:$input) {
+                id,
+                name
+            }
+        }
+        `
+        fetch("/graphQL", {
+            method:'POST',
+            headers:{
+                'Content-type':'application/json',
+                'Accept':'application/json'
+            },
+            body:JSON.stringify({
+                query:query,
+                variables: {//传参的固定写法
+                    input: {
+                        name:"444",
+                        poster: "https://444",
+                        price:100
+                    }
+                }
+            })
+        }).then(res=>res.json()).then(res=>{
+            console.log(res)
+        })
+    }
+    function updateData(params) {
+        let query = `
+        mutation ($id:String!,$input:InputFilm){
+            updateFilm(id:$id,input:$input) {
+                id,
+                name
+            }
+        }
+        `
+        fetch("/graphQL", {
+            method:'POST',
+            headers:{
+                'Content-type':'application/json',
+                'Accept':'application/json'
+            },
+            body:JSON.stringify({
+                query:query,
+                variables: {//传参的固定写法
+                    id:"62dbc00406ecc084cbea1ca8",
+                    input: {
+                        name:"444+1"
+                    }
+                }
+            })
+        }).then(res=>res.json()).then(res=>{
+            console.log(res)
+        })
+    }
+    function deleteData() {
+        let query = `
+        mutation ($id:String!){
+            deleteFilm(id:$id)
+        }
+        `
+        fetch("/graphQL", {
+            method:'POST',
+            headers:{
+                'Content-type':'application/json',
+                'Accept':'application/json'
+            },
+            body:JSON.stringify({
+                query:query,
+                variables: {//传参的固定写法
+                    id:"62dbc00406ecc084cbea1ca8",
+                }
+            })
+        }).then(res=>res.json()).then(res=>{
+            console.log(res)
+        })
+    }
+</script>
+</html>
