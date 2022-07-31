@@ -1,0 +1,11 @@
+/* 局部只对类或id选择器生效 */
+$color1:red;
+$color2:yellow;
+
+.test{
+  background: $color1;
+}
+/* 全局 */
+:global(.test1) {
+  background-color: $color2;
+}
