@@ -34,8 +34,6 @@ export default function Home() {
     axios.delete('http://localhost:8000/posts/2').then(res=>{
       console.log('删除')
     })
-
-    */
    // _embed 取关联表的数据嵌入结果中 向下找关联 使用到postId的表
    axios.get('http://localhost:8000/posts?_embed=comments').then(res=>{
       console.log(res.data)
@@ -45,6 +43,7 @@ export default function Home() {
     axios.get('http://localhost:8000/comments?_expand=post').then(res=>{
       console.log(res.data)
     })
+    */
   }
   return (
     <div>
