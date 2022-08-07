@@ -1,5 +1,5 @@
-import {useState,useEffect} from 'react'
-import {withRouter} from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { withRouter } from 'react-router-dom'
 import {
   UploadOutlined,
   UserOutlined,
@@ -12,35 +12,38 @@ const { Header, Sider, Content } = Layout;
 function SideMenu(props) {
   const [collapsed, setCollapsed] = useState(false);
   const [newsMenu, setNewsMenu] = useState([])
+  // console.log('sidemenu:', props.location)
+  const selectedKeys = [props.location.pathname]
+  const openKeys = ['/'+props.location.pathname.split('/')[1]]
   //图标映射表
   const iconList = {
-    '/home':<UserOutlined />,
-    '/user-manage':<VideoCameraOutlined />,
-    '/user-manage/list':<VideoCameraOutlined />,
-    '/right-manage':<VideoCameraOutlined />,
-    '/right-manage/role/list':<VideoCameraOutlined />,
-    '/right-manage/right/list':<VideoCameraOutlined />,
+    '/home': <UserOutlined />,
+    '/user-manage': <VideoCameraOutlined />,
+    '/user-manage/list': <VideoCameraOutlined />,
+    '/right-manage': <VideoCameraOutlined />,
+    '/right-manage/role/list': <VideoCameraOutlined />,
+    '/right-manage/right/list': <VideoCameraOutlined />,
   }
-  function onClickMenu({key, keyPath, domEvent }){
+  function onClickMenu({ key, keyPath, domEvent }) {
     props.history.push(key)
   }
   function transformData(menus) {
     let root = []
-    let backtrack = function(originArr,newArr) {
-      for(let i = 0; i<originArr.length; i++) {
+    let backtrack = function (originArr, newArr) {
+      for (let i = 0; i < originArr.length; i++) {
         let menu = originArr[i]
         //检查权限
-        if(menu.pagepermisson) {
+        if (menu.pagepermisson) {
           let data = {
-            key:menu.key,
-            icon:iconList[menu.key] || <UserOutlined />,
-            label:menu.title
+            key: menu.key,
+            icon: iconList[menu.key] || <UserOutlined />,
+            label: menu.title
           }
           newArr.push(data)
-          if(menu.children) {
+          if (menu.children) {
             data.children = []
             backtrack(menu.children, data.children)
-            if(data.children.length == 0) {
+            if (data.children.length == 0) {
               delete data.children
             }
           }
@@ -50,8 +53,8 @@ function SideMenu(props) {
     backtrack(menus, root)
     return root
   }
-  useEffect(()=>{
-    axios.get('http://localhost:8000/rights?_embed=children').then(res=>{
+  useEffect(() => {
+    axios.get('http://localhost:8000/rights?_embed=children').then(res => {
       console.log(res.data)
       setNewsMenu(transformData(res.data))
     })
@@ -96,14 +99,19 @@ function SideMenu(props) {
   */
   return (
     <Sider trigger={null} collapsible collapsed={collapsed}>
-      <div className="logo" >全球新闻发布管理系统</div>
-      <Menu
-        onClick={(params)=>onClickMenu(params)}
-        theme="dark"
-        mode="inline"
-        defaultSelectedKeys={['1']}
-        items={newsMenu}
-      />
+      <div style={{ display: 'flex', height: '100%', flexDirection: 'column' }}>
+        <div className="logo" >全球新闻发布管理系统</div>
+        <div style={{flex:1, overflow:'auto'}}>
+          <Menu
+            onClick={(params) => onClickMenu(params)}
+            theme="dark"
+            mode="inline"
+            selectedKeys={selectedKeys}
+            defaultOpenKeys = {openKeys}
+            items={newsMenu}
+          />
+        </div>
+      </div>
     </Sider>
   )
 }
