@@ -24,8 +24,15 @@ function SideMenu(props) {
     '/right-manage/role/list': <VideoCameraOutlined />,
     '/right-manage/right/list': <VideoCameraOutlined />,
   }
+  const user = JSON.parse(localStorage.getItem('token'))//当前登录用户
   function onClickMenu({ key, keyPath, domEvent }) {
     props.history.push(key)
+  }
+
+  function checkPagePermisson(item) {
+    //检查权限
+    let rights = user.role.rights
+    return item.pagepermisson && rights.includes(item.key)
   }
   function transformData(menus) {
     let root = []
@@ -33,7 +40,7 @@ function SideMenu(props) {
       for (let i = 0; i < originArr.length; i++) {
         let menu = originArr[i]
         //检查权限
-        if (menu.pagepermisson) {
+        if (checkPagePermisson(menu)) {
           let data = {
             key: menu.key,
             icon: iconList[menu.key] || <UserOutlined />,

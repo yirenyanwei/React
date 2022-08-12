@@ -5,6 +5,9 @@ const { Option } = Select
 
 function UserForm(props, ref) {
     const [isDisable, setIsDisable] = useState(false)
+    useEffect(()=>{
+        setIsDisable(props.isUpdateDisable)
+    }, [props.isUpdateDisable])
     return (
         <Form
             ref={ref}
@@ -23,7 +26,7 @@ function UserForm(props, ref) {
                 label="密码"
                 rules={[{ required: true, message: 'Please input the title of collection!' }]}
             >
-                <Input type='password'/>
+                <Input />
             </Form.Item>
             <Form.Item
                 name="region"

@@ -5,38 +5,34 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 import { Layout, Menu, Dropdown, Avatar } from 'antd';
+import { withRouter } from 'react-router-dom';
 const { Header, Sider, Content } = Layout;
-export default function TopHeader() {
+function TopHeader(props) {
   const [collapsed, setCollapsed] = useState(false);
+  const user = JSON.parse(localStorage.getItem('token'))
   const menu = (
     <Menu
+      onClick={(params) => onClickMenu(params)}
       items={[
         {
           key: '1',
-          label: (
-            111
-          ),
+          label: user.role.roleName,
         },
         {
           key: '2',
-          label: (
-            222
-          ),
-        },
-        {
-          key: '3',
-          label: (
-            333
-          ),
-        },
-        {
-          key: '4',
           danger: true,
           label: '退出',
         },
       ]}
     />
   );
+  function onClickMenu( {key, keyPath, domEvent }) {
+    if(key == '2') {
+      //退出
+      localStorage.removeItem('token')
+      props.history.replace('/login')
+    }
+  }
   return (
     <div>
       <Header className="site-layout-background" style={{ padding: '0 16px' }}>
@@ -46,7 +42,7 @@ export default function TopHeader() {
         })}
 
         <div style={{float:'right'}}>
-          <span>欢迎admin回来</span>
+          <span>欢迎{user.username}回来</span>
           <Dropdown overlay={menu}>
             <Avatar size="large" icon={<UserOutlined />} />
           </Dropdown>
@@ -55,3 +51,4 @@ export default function TopHeader() {
     </div>
   )
 }
+export default withRouter(TopHeader)

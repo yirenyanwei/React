@@ -71,6 +71,15 @@
       "region": "亚洲",
       "roleId": 3,
       "id": 8
+    },
+    {
+      "username": "test1",
+      "password": "123",
+      "region": "亚洲",
+      "roleId": 2,
+      "roleState": true,
+      "default": false,
+      "id": 9
     }
   ],
   "roles": [
@@ -113,7 +122,6 @@
       "roleName": "区域管理员",
       "roleType": 2,
       "rights": [
-        "/home",
         "/user-manage",
         "/user-manage/add",
         "/user-manage/delete",
@@ -132,7 +140,8 @@
         "/publish-manage",
         "/publish-manage/unpublished",
         "/publish-manage/published",
-        "/publish-manage/sunset"
+        "/publish-manage/sunset",
+        "/home"
       ]
     },
     {
