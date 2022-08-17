@@ -5,6 +5,46 @@ const { Option } = Select
 
 function UserForm(props, ref) {
     const [isDisable, setIsDisable] = useState(false)
+    const userInfo = JSON.parse(localStorage.getItem('token'))
+    function checkRegionDisabled(item) {
+        let roleId = userInfo.roleId //1超级管理员 2区域管理员 3区域编辑
+        let region = userInfo.region
+        //检查区域编辑
+        if(props.isUpdate) {
+            if(roleId == 1) {
+                return false
+            }else{
+                return true
+            }
+        }else {
+            //添加
+            if(roleId == 1) {
+                return false
+            }else{
+                //判断相同区域
+                return region != item.value
+            }
+        }
+    }
+    function checkRoleDisabled(item) {
+        //检查角色
+        let roleId = userInfo.roleId //1超级管理员 2区域管理员 3区域编辑
+        if(props.isUpdate) {
+            if(roleId == 1) {
+                return false
+            }else{
+                return true
+            }
+        }else {
+            //添加
+            if(roleId == 1) {
+                return false
+            }else{
+                //判断权限
+                return item.id != 3
+            }
+        }
+    }
     useEffect(()=>{
         setIsDisable(props.isUpdateDisable)
     }, [props.isUpdateDisable])
@@ -36,7 +76,7 @@ function UserForm(props, ref) {
             >
                 <Select disabled={isDisable}>
                     {props.regionList.map(item =>
-                        <Option value={item.value} key={item.id}>{item.value}</Option>
+                        <Option value={item.value} key={item.id} disabled={checkRegionDisabled(item)}>{item.value}</Option>
                     )}
                 </Select>
             </Form.Item>
@@ -56,7 +96,7 @@ function UserForm(props, ref) {
                     }
                 }}>
                     {props.roleList.map(item =>
-                        <Option value={item.id} key={item.id}>{item.roleName}</Option>
+                        <Option value={item.id} key={item.id} disabled={checkRoleDisabled(item)}>{item.roleName}</Option>
                     )}
                 </Select>
             </Form.Item>

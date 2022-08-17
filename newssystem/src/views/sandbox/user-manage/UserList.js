@@ -15,6 +15,7 @@ export default function UserList() {
   const [currentUpdateItem, setCurrentUpdateItem] = useState(null)
   const formRef = useRef(null)
   const updateFormRef = useRef(null)
+  const userInfo = JSON.parse(localStorage.getItem('token'))
   const columns = [
     {
       title: '区域',
@@ -161,9 +162,25 @@ export default function UserList() {
     })
   }
   useEffect(() => {
+    let roleId = userInfo.roleId //1超级管理员 2区域管理员 3区域编辑
+    let region = userInfo.region
+    let userName = userInfo.username
     //用户列表 向下关联roleId
     axios.get('http://localhost:8000/users?_expand=role').then(res => {
-      setDataSource(res.data)
+      let list = res.data
+      if(roleId!=1) {
+        list = list.filter(item=>{
+          if(item.username == userName){
+            //自己
+            return true
+          }
+          if(item.region==region && item.roleId==3){
+            //同一区域的区域编辑
+            return true
+          }
+        })
+      }
+      setDataSource(list)
     })
     //角色列表
     axios.get('http://localhost:8000/roles').then(res => {
@@ -200,7 +217,7 @@ export default function UserList() {
         onCancel={()=>setIsUpdateVisible(false)}
         onOk={updateFormOk}
       >
-        <UserForm regionList={regionList} roleList={roleList} ref={updateFormRef} isUpdateDisable={isUpdateDisable}></UserForm>
+        <UserForm regionList={regionList} roleList={roleList} ref={updateFormRef} isUpdateDisable={isUpdateDisable} isUpdate={true}></UserForm>
       </Modal>
     </div>
   )
