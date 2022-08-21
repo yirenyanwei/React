@@ -83,14 +83,14 @@ export default function UserList() {
     setCurrentUpdateItem(item)
   }
   function changeRoleState(item) {
-    axios.patch(`http://localhost:8000/users/${item.id}`, {roleState:!item.roleState}).then(res => {
+    axios.patch(`/users/${item.id}`, {roleState:!item.roleState}).then(res => {
       //修改状态
       item.roleState = !item.roleState
       setRoleList([...roleList])
     })
   }
   function deleteItem(item) {
-    axios.delete(`http://localhost:8000/users/${item.id}`).then(res => {
+    axios.delete(`/users/${item.id}`).then(res => {
       //删除前端
       setDataSource(dataSource.filter(data => data.id != item.id))
     })
@@ -119,7 +119,7 @@ export default function UserList() {
       //重置form
       form.resetFields()
       //post到后端生成id
-      axios.post('http://localhost:8000/users', {
+      axios.post('/users', {
         ...res,
         "roleState": true,//开关状态
         "default": false,//是否可删除
@@ -143,7 +143,7 @@ export default function UserList() {
       console.log(res)
       setIsUpdateVisible(false)
       
-      axios.patch(`http://localhost:8000/users/${currentUpdateItem.id}`, res).then(result=>{
+      axios.patch(`/users/${currentUpdateItem.id}`, res).then(result=>{
         setDataSource(dataSource.map(item=>{
           if(item.id == currentUpdateItem.id) {
             return {
@@ -166,7 +166,7 @@ export default function UserList() {
     let region = userInfo.region
     let userName = userInfo.username
     //用户列表 向下关联roleId
-    axios.get('http://localhost:8000/users?_expand=role').then(res => {
+    axios.get('/users?_expand=role').then(res => {
       let list = res.data
       if(roleId!=1) {
         list = list.filter(item=>{
@@ -183,11 +183,11 @@ export default function UserList() {
       setDataSource(list)
     })
     //角色列表
-    axios.get('http://localhost:8000/roles').then(res => {
+    axios.get('/roles').then(res => {
       setRoleList(res.data)
     })
     //区域
-    axios.get('http://localhost:8000/regions').then(res => {
+    axios.get('/regions').then(res => {
         setRegionList(res.data)
     })
 

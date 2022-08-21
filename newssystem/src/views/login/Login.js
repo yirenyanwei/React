@@ -6,7 +6,7 @@ import axios from 'axios';
 export default function Login(props) {
   function onFinish(values) {
     console.log(values)
-    axios.get(`http://localhost:8000/users?username=${values.username}&password=${values.password}&roleState=true&_expand=role`).then(res=>{
+    axios.get(`/users?username=${values.username}&password=${values.password}&roleState=true&_expand=role`).then(res=>{
       console.log(res.data)
       if(res.data.length>0) {
         localStorage.setItem('token', JSON.stringify(res.data[0]))

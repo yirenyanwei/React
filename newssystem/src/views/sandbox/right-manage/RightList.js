@@ -53,11 +53,11 @@ export default function RightList() {
           setDataSource([...dataSource])
           //同步后端
           if (item.grade == 1) {
-            axios.patch(`http://localhost:8000/rights/${item.id}`, {pagepermisson:item.pagepermisson}).then(res => {
+            axios.patch(`/rights/${item.id}`, {pagepermisson:item.pagepermisson}).then(res => {
 
             })
           }else {
-            axios.patch(`http://localhost:8000/children/${item.id}`, {pagepermisson:item.pagepermisson}).then(res => {
+            axios.patch(`/children/${item.id}`, {pagepermisson:item.pagepermisson}).then(res => {
 
             })
           }
@@ -68,14 +68,14 @@ export default function RightList() {
   function deleteItem(item) {
     console.log(item)
     if (item.grade == 1) {
-      axios.delete(`http://localhost:8000/rights/${item.id}`).then(res => {
+      axios.delete(`/rights/${item.id}`).then(res => {
         //删除前端
         setDataSource(dataSource.filter(data => data.id != item.id))
       })
 
     } else {
       //删除二级菜单
-      axios.delete(`http://localhost:8000/children/${item.id}`).then(res => {
+      axios.delete(`/children/${item.id}`).then(res => {
         let newDataSource = [...dataSource]
         let rightId = item.rightId
         let rights = newDataSource.filter(data => data.id == rightId)
@@ -121,7 +121,7 @@ export default function RightList() {
 
   }
   useEffect(() => {
-    axios.get('http://localhost:8000/rights?_embed=children').then(res => {
+    axios.get('/rights?_embed=children').then(res => {
       setDataSource(transformData(res.data))
     })
   }, [])

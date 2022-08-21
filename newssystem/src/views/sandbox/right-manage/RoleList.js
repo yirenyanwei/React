@@ -39,7 +39,7 @@ export default function RoleList() {
   ];
   function deleteItem(item) {
     console.log(item)
-    axios.delete(`http://localhost:8000/roles/${item.id}`).then(res => {
+    axios.delete(`/roles/${item.id}`).then(res => {
       //删除前端
       setDataSource(dataSource.filter(data => data.id != item.id))
     })
@@ -61,7 +61,7 @@ export default function RoleList() {
   function handleOk() {
     setIsModalVisible(false)
     //同步后端，同步DataSource
-    axios.patch(`http://localhost:8000/roles/${currentItem.id}`, {rights:currentItem.rights}).then(res => {
+    axios.patch(`/roles/${currentItem.id}`, {rights:currentItem.rights}).then(res => {
       setDataSource(dataSource.map(item=>{
         if(item.id == currentItem.id) {
           item.rights = currentItem.rights
@@ -82,12 +82,12 @@ export default function RoleList() {
     
   }
   useEffect(() => {
-    axios.get('http://localhost:8000/roles').then(res => {
+    axios.get('/roles').then(res => {
       console.log(res.data)
       setDataSource(res.data)
     })
 
-    axios.get('http://localhost:8000/rights?_embed=children').then(res=>{
+    axios.get('/rights?_embed=children').then(res=>{
       console.log(res.data)
       setRightList(res.data)
     })

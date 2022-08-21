@@ -61,7 +61,7 @@ function SideMenu(props) {
     return root
   }
   useEffect(() => {
-    axios.get('http://localhost:8000/rights?_embed=children').then(res => {
+    axios.get('/rights?_embed=children').then(res => {
       console.log(res.data)
       setNewsMenu(transformData(res.data))
     })
